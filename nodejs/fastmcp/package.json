@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fastmcp": "^3.34.0",
+    "zod": "^4.3.6"
+  }
+}
