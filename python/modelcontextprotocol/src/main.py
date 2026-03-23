@@ -1,7 +1,9 @@
-from mcp.server.mcpserver import MCPServer
+import mcp
+
+from mcp.server.fastmcp import FastMCP
 
 
-mcp = MCPServer("Demo")
+mcp = FastMCP("Demo", port=8080, host="0.0.0.0")
 
 
 @mcp.tool()
@@ -10,4 +12,4 @@ def greet(name: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http", json_response=True)
+    mcp.run(transport="streamable-http")
